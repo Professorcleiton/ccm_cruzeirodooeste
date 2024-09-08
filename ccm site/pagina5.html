@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking de Frequência Mensal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .low {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .medium {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        .high {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .podium {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .podium div {
+            width: 100px;
+            height: 150px;
+            margin: 0 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            font-weight: bold;
+            color: #fff;
+        }
+        .first {
+            background-color: gold;
+            height: 200px;
+        }
+        .second {
+            background-color: silver;
+        }
+        .third {
+            background-color: #cd7f32;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ranking de Frequência Mensal</h1>
+
+    <div class="podium">
+        <div class="second">2º<br>7°Ano C<br>97%</div>
+        <div class="first">1º<br>9°Ano C<br>97%</div>
+        <div class="third">3º<br>1°Ano B<br>96%</div>
+    </div>
+
+    <h2>Top 10 Turmas</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Posição</th>
+                <th>Turma</th>
+                <th>Média Mensal (%)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>9°Ano C</td>
+                <td class="high">97%</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>7°Ano C</td>
+                <td class="high">97%</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>1°Ano B</td>
+                <td class="high">96%</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>6°Ano C</td>
+                <td class="high">96%</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>8°Ano B</td>
+                <td class="high">96%</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>3°Ano A</td>
+                <td class="high">95%</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>6°Ano B</td>
+                <td class="medium">90%</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>8°Ano A</td>
+                <td class="medium">90%</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>1°Ano A</td>
+                <td class="medium">90%</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>2°Ano A</td>
+                <td class="medium">88%</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
