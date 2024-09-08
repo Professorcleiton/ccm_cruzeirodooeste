@@ -412,3 +412,35 @@ html, body {
     display: block;
     opacity: 1;
 }
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+.botao-equipe {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 2rem;
+}
+
+.membro-equipe {
+    background-color: #fff;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.membro-equipe img {
+    max-width: 150px;
+    border-radius: 50%;
+}
+
+.membro-equipe h3 {
+    margin-top: 0;
+}
