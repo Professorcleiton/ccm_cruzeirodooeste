@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadual Cruzeiro do Oeste</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<div class="overlay-container" id="overlay">
+    <a href="https://youtu.be/lRrgKmLFCas?si=FvCLYgoCf7i_lCsj">
+        <img src="https://i.pinimg.com/236x/40/53/6e/40536eafbbfb5042b2cec77420afa581.jpg" alt="Descrição da imagem">
+        <div class="overlay-text">Se você se indentificou clique para mais!!</div>
+    </a>
+    <button class="close-btn" onclick="closeOverlay()">X</button>
+</div>
+<a name="TOPO">âncora</a>
+<body> 
+    <header>
+        <img src="https://th.bing.com/th/id/OIP.yvacyDmgYgrns3Hg56cKxQHaHa?w=180&h=180&c=7&r=0&o=5&pid=1.7" alt="NRE Umuarama">
+        <img src="https://th.bing.com/th/id/OIG3.dTy92lcSxnZBNb6zeNUU?w=1024&h=1024&rs=1&pid=ImgDetMain" alt="Mascote">
+        <img src="https://cdn.iset.io/assets/58757/produtos/175821/9e0652aebcad2da925e5ece505e0207264d95abe36a32.png" alt="Descrição da imagem">
+        <img src="data:image/jpeg;base64,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" alt="seed">
+        <div class="logo">Estadual Cruzeiro do Oeste</div>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#Equipe Administrativa">Nossa História</a></li>
+                <li><a href="#Fique por dentro">Notícias do Colégio</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#gallery">Galeria</a></li>
+            </ul>
+        </nav>
+        <div class="social-media">
+            <a href="https://www.instagram.com/ccm_cruzeirodooeste/" target="_blank" class="social-button">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/Colegioestadualcruzeirodooeste/" target="_blank" class="social-button">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </div>
+    </header>
+    
+    <section id="banner">
+        <img src="https://th.bing.com/th/id/OIP.YoApGV6VWa6FaODVqaffKAHaFj?rs=1&pid=ImgDetMain" alt="Campus da Escola">
+        <h1>Bem-vindo ao Estadual Cruzeiro do Oeste</h1>
+        <p>Nosso Colégio é um lugar maravilhoso com uma comunidade escolar participativa e atuante, onde cada um se dedica com amor e comprometimento para desempenhar sua função da melhor maneira possível”</p>
+    </section>
+   <div style="height: 1500px;"> 
+    <section id="sobre">
+        <h2>Sobre Nós</h2>
+        <p>O Colégio Estadual Cruzeiro do Oeste, localizado na cidade de Cruzeiro do Oeste, Paraná, é uma instituição de ensino comprometida com a formação integral de seus alunos. Fundado com a missão de proporcionar uma educação de qualidade, o colégio oferece uma ampla gama de cursos e atividades que visam o desenvolvimento acadêmico, social e pessoal dos estudantes.
+
+            <br>Nossa escola conta com uma infraestrutura moderna, incluindo salas de aula climatizadas, laboratórios de ciências e informática, biblioteca com sala de leitura, quadra de esportes coberta e espaços de convivência. Além disso, estamos sempre em busca de inovações tecnológicas e metodológicas para enriquecer o processo de ensino e aprendizagem.
+            
+            O corpo docente do Colégio Estadual Cruzeiro do Oeste é composto por profissionais altamente qualificados e dedicados, que trabalham incansavelmente para garantir que cada aluno alcance seu pleno potencial. Valorizamos a diversidade e promovemos um ambiente inclusivo, onde todos são bem-vindos e respeitados.
+            
+            <br>Nosso compromisso com a educação vai além das salas de aula. <br>Oferecemos diversas atividades extracurriculares, como esportes, artes e projetos sociais, que incentivam os alunos a desenvolverem suas habilidades e interesses. <br>Acreditamos que a educação é a chave para um futuro melhor e estamos dedicados a preparar nossos alunos para os desafios do mundo moderno. <br>
+            
+           <br> Venha conhecer o Colégio Estadual Cruzeiro do Oeste e faça parte da nossa comunidade escolar!</p><br>
+               <br><p><strong><u> Cursos Tecnicos - Informação e comunicação </u></strong></p><br>
+               <p class="arrow"> Desenvolvimento de Sistemas </p><br>
+            <br><p><strong><u> Acessibilidade </u></strong></p><br>
+               <p class="arrow"> Corrimão e guarda corpos </p><br>
+                <p class="arrow"> Rampas </p><br>
+                <p class="arrow"> Salas de aula com acessibilidade para pessoas com deficiência ou mobilidade reduzida </p><br>
+            <br><p><strong><u> Dependências </u></strong></p><br>
+                <p class="arrow"> Biblioteca </p><br>
+                <p class="arrow"> Laborarório de ciências </p><br>
+                <p class="arrow"> Biblioteca com Sala de leitura </p><br>
+                <p class="arrow"> Salas de aula climatizadas </p><br>
+                <p class="arrow"> Quadra de esportes coberta </p><br>
+                <p class="arrow"> Pátio coberto </p><br>
+                <p class="arrow"> Quadra de esportes descoberta </p><br>
+                <p class="arrow"> Pátio descoberto </p><br>
+                <p class="arrow"> Cozinha </p><br>
+                <p class="arrow"> Refeitório </p><br>
+                <p class="arrow"> Alimentação escolar para os alunos </p><br>
+            <br><p><strong><u> Tecnologia </u></strong></p><br>
+                <p class="arrow"> Computador portátil em uso pelos alunos </p><br>
+                <p class="arrow">Laboratório de informática </p><br>
+                <p class="arrow"> Acesso à Internet - Para uso dos alunos </p><br>
+                <p class="arrow"> Internet - Para uso nos processos de ensino e aprendizagem </p><br>
+                <p class="arrow">Banda larga </p><br>
+                <p class="arrow">Desktop para aluno <br>
+            <br><p><strong><u> Sustentabilidade </u></strong></p><br>
+                <p class="arrow">Área verde </p><br>
+                <p class="arrow"> Separação do lixo/resíduos </p><br>
+            <br><p><strong><u> Material Didático </u></strong></p><br>
+                <p class="arrow"> Jogos Educativos </p><br>
+                <p class="arrow"> Equipamento para amplificação e difusão de som/áudio </p><br>
+                <p class="arrow"> Materiais para prática desportiva e recreação </p><br>
+                <p class="arrow"> Materiais pedagógicos para a educação das relações étnico-raciais </p><br>
+            <br><p><strong><u>Profissionais</u></strong></p><br>
+                <p class="arrow"> Bibliotecário(a), auxiliar de biblioteca ou monitor(a) da sala de leitura </p><br>
+                <p class="arrow"> Profissionais de preparação e segurança alimentar </p><br>
+                <p class="arrow"> Profissionais de apoio e supervisão pedagógica </p><br>
+
+</section>
+    
+    <section id="Equipe Administrativa">
+        <h2>Nossa História</h2>
+        <p>Linha do Tempo da História do Colégio Estadual Cruzeiro do Oeste
+            Fundação do Colégio (1954) <br>
+            O Colégio Estadual Cruzeiro do Oeste foi fundado em 1954, como parte do desenvolvimento educacional da região.
+            Primeira Turma de Formandos (1955) <br>
+            A primeira turma de alunos se formou em 1955, marcando o início de uma tradição de excelência acadêmica.
+            Expansão das Instalações (Anos 1960) <br>
+            Durante os anos 1960, o colégio expandiu suas instalações para incluir novos laboratórios, bibliotecas e áreas esportivas, atendendo ao crescimento da demanda educacional.
+            Introdução de Novos Programas Acadêmicos (Anos 1970) <br>
+            Nos anos 1970, novos programas acadêmicos foram introduzidos, incluindo cursos técnicos e profissionalizantes, para atender às necessidades educacionais em evolução.
+            Parcerias com Instituições de Ensino Superior (Anos 1980) <br>
+            Durante os anos 1980, o colégio estabeleceu parcerias com instituições de ensino superior, permitindo que os alunos tivessem acesso a programas de extensão e intercâmbios acadêmicos.
+            Reconhecimento e Prêmios (Anos 1990) <br>
+            Nos anos 1990, o colégio recebeu diversos prêmios e reconhecimentos por sua excelência em áreas como ciências, matemática e esportes.
+            Implementação de Tecnologia Avançada (Anos 2000) <br>
+            Nos anos 2000, o colégio implementou tecnologia avançada em suas salas de aula, incluindo computadores, internet de alta velocidade e equipamentos multimídia, para melhorar a experiência de aprendizado.
+            Celebração de 50 Anos (2004) <br>
+            Em 2004, o colégio celebrou seu 50º aniversário com eventos especiais e homenagens a ex-alunos e funcionários.
+            Iniciativas de Sustentabilidade (Anos 2010) <br>
+            Nos anos 2010, o colégio lançou iniciativas de sustentabilidade, como projetos de reciclagem e hortas comunitárias, para promover a consciência ambiental entre os alunos.
+            Desenvolvimento Contínuo (2020 e Além) <br>
+            O colégio continua a evoluir e se adaptar às novas demandas educacionais, mantendo seu compromisso com a excelência e a inovação. <br>
+           <br> Essa linha do tempo reflete os principais marcos na história do Colégio Estadual Cruzeiro do Oeste. Se precisar de mais detalhes ou ajustes, estou aqui para ajudar! 😊</p>
+    </section>
+    
+    <section id="Fique por dentro">
+        <h2>Notícias do Colégio</h2>
+        <p>Bem-vindo à seção de notícias do nosso colégio! Aqui você encontrará as últimas atualizações, eventos e informações importantes sobre a nossa comunidade escolar. Fique por dentro das atividades, conquistas dos alunos, eventos futuros e muito mais. Nossa missão é manter todos informados e engajados com tudo o que acontece no colégio. Não perca nenhuma novidade!</p>
+        <div class="button-container">
+            <a href="pagina1.html" class="button">Horário</a>
+            <a href="pagina2.html" class="button">Noticias</a>
+            <a href="pagina3.html" class="button">Frequenciômetro</a>
+            <a href="pagina4.html" class="button">Campanha do Mês</a>
+            <a href="pagina5.html" class="button">Ranking da frequência</a>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>Galeria</h2>
+        <figure class="gallery__item">
+            <img src="img/image-1.jpg" alt="Imagem 1" class="gallery__img">
+            <figcaption class="gallery__caption">Resultado IDEB 2023 ccm_cruzeirodooeste no top 10</figcaption>
+        </figure>
+        <figure class="gallery__item">
+            <img src="img/image-2.jpg" alt="Imagem 2" class="gallery__img">
+            <figcaption class="gallery__caption">Formandos 2023</figcaption>
+        </figure>
+        <figure class="gallery__item">
+            <img src="img/image-3.jpg" alt="Imagem 3" class="gallery__img">
+            <figcaption class="gallery__caption">Alunos Chefes de turma 2024</figcaption>
+        </figure>
+        <!-- Adicione mais figuras conforme necessário -->
+    </section>
+    <button id="back-to-top" ></button><button class="back-to-top">↑ Voltar ao Topo</button>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <form id="contactForm">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <p id="formMessage"></p>
+    </section>
+   <a href="#TOPO">voltar ao TOPO</a>
+<script src="script.js"></script>
+    
+    <footer>
+        <p>&copy; 2024 Estadual Cruzeiro do Oeste | Endereço Av Santos Dumont, 317  | Telefone (44) 3676-1514| E-mail cztcruzeirodooeste@seed.pr.gov.br</p>
+    </footer>
+</div>
+    <!-- Código do Chatbot -->
+<section id="chatbot">
+    <div id="chatbox">
+        <div id="chat-header">
+            <h2>Assistente Virtual</h2>
+            <button id="close-chat">X</button>
+        </div>
+        <div id="chat-content">
+            <div id="chat-log"></div>
+            <div id="chat-input-container">
+                <input type="text" id="chat-input" placeholder="Digite sua mensagem...">
+                <button id="send-message">Enviar</button>
+            </div>
+        </div>
+    </div>
+    <button id="open-chat">Chat</button>
+    
+</section>
+
+</body>
+</html>
+
