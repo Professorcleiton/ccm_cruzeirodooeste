@@ -113,7 +113,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
     // Verifique as credenciais (aqui está um exemplo simples)
     if (username === 'admin' && password === '1234') {
-        window.location.href = 'area-restrita.html';
+        window.location.href = 'ccm_cruzeirodooeste/area-restrita.html';
     } else {
         alert('Usuário ou senha incorretos');
     }
