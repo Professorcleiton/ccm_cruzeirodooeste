@@ -444,3 +444,8 @@ main {
 .membro-equipe h3 {
     margin-top: 0;
 }
+video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
