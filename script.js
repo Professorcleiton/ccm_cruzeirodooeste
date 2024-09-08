@@ -106,3 +106,15 @@ document.getElementById("back-to-top").addEventListener("click", function() {
         behavior: "smooth"
     });
 });
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    // Verifique as credenciais (aqui está um exemplo simples)
+    if (username === 'admin' && password === '1234') {
+        window.location.href = 'area-restrita.html';
+    } else {
+        alert('Usuário ou senha incorretos');
+    }
+});
