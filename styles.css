@@ -465,27 +465,6 @@ video {
 .links-uteis ul li a:hover {
     text-decoration: underline;
 }
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 1rem;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-main {
-    padding: 2rem;
-    text-align: center;
-}
-
 .botao-restrito {
     display: inline-block;
     padding: 1rem 2rem;
