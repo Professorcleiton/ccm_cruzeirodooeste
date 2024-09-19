@@ -13,8 +13,8 @@ body {
 }
 
 header {
-    background: #252440; /* Azul escuro */
-    color: #000000;
+    background: #000000; /* Azul escuro */
+    color: #252440;
     padding: 1rem;
     text-align: center;
     position: relative;
