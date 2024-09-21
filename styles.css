@@ -72,7 +72,7 @@ section {
 }
 
 #banner {
-    background: #e0f2f1; /* Verde claro */
+    background: #rgb(0, 18, 46); /* Verde claro */
     text-align: center;
     padding: 4rem 0;
     border-bottom: 2px solid #0056a0; /* Azul escuro */
