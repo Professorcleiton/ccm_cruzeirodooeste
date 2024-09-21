@@ -118,3 +118,18 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         alert('Usuário ou senha incorretos');
     }
 });
+function checkPassword() {
+    const password = document.getElementById('password').value;
+    const errorMessage = document.getElementById('error-message');
+
+    // Defina a senha correta aqui
+    const correctPassword = '12345';
+
+    if (password === correctPassword) {
+        // Redireciona para a página restrita
+        window.location.href = 'area-restrita.html';
+    } else {
+        errorMessage.textContent = 'Senha incorreta. Tente novamente.';
+    }
+}
+
