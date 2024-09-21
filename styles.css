@@ -85,7 +85,7 @@ section {
 }
 
 #banner h1 {
-    color: #f9f9f9; /* Azul escuro */
+    color: #rgb(0, 18, 46); /* Azul escuro */
     font-size: 2.5rem;
     margin-top: 1rem;
 }
