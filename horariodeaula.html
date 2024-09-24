@@ -4,7 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horários de Aula - CECM Cruzeiro do Oeste</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
     <h1>Horários de Aula - CECM Cruzeiro do Oeste</h1>
@@ -20,6 +53,36 @@
             <!-- As linhas da tabela serão preenchidas pelo JavaScript -->
         </tbody>
     </table>
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const schedule = [
+                { time: '07:00 - 07:50', morning: 'Aula 1', afternoon: 'Aula 1' },
+                { time: '07:50 - 08:40', morning: 'Aula 2', afternoon: 'Aula 2' },
+                { time: '08:40 - 09:30', morning: 'Aula 3', afternoon: 'Aula 3' },
+                { time: '09:30 - 09:40', morning: 'Intervalo', afternoon: 'Intervalo' },
+                { time: '09:40 - 10:30', morning: 'Aula 4', afternoon: 'Aula 4' },
+                { time: '10:30 - 11:20', morning: 'Aula 5', afternoon: 'Aula 5' },
+                { time: '11:20 - 12:10', morning: 'Aula 6', afternoon: 'Aula 6' },
+                { time: '13:00 - 13:50', morning: '', afternoon: 'Aula 1' },
+                { time: '13:50 - 14:40', morning: '', afternoon: 'Aula 2' },
+                { time: '14:40 - 15:30', morning: '', afternoon: 'Aula 3' },
+                { time: '15:30 - 15:40', morning: '', afternoon: 'Intervalo' },
+                { time: '15:40 - 16:30', morning: '', afternoon: 'Aula 4' },
+                { time: '16:30 - 17:20', morning: '', afternoon: 'Aula 5' },
+                { time: '17:20 - 18:10', morning: '', afternoon: 'Aula 6' }
+            ];
+
+            const tbody = document.querySelector('#schedule tbody');
+            schedule.forEach(slot => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${slot.time}</td>
+                    <td>${slot.morning}</td>
+                    <td>${slot.afternoon}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        });
+    </script>
 </body>
 </html>
