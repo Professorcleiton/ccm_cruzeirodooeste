@@ -3,12 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notícias</title>
+    <title>Site de Notícias</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
             padding: 0;
+        }
+        #news-thumbnails {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .news-thumbnail {
+            width: 200px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            text-align: center;
+            cursor: pointer;
+        }
+        .news-thumbnail img {
+            width: 100%;
+            height: auto;
+        }
+        .news-thumbnail .title {
+            font-size: 18px;
+            padding: 10px;
+            background-color: #f8f8f8;
+        }
+        .news-container img {
+            width: 100%;
+            height: auto;
         }
         .news-container {
             max-width: 800px;
@@ -17,64 +44,69 @@
             border: 1px solid #ddd;
             border-radius: 5px;
             margin-bottom: 20px;
-        }
-        .news-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-        .news-title {
-            font-size: 24px;
-            margin-bottom: 10px;
-            color: #333;
+            text-align: center;
         }
         .news-content {
             font-size: 16px;
             line-height: 1.6;
         }
-        .add-news {
-            margin: 20px 0;
-        }
     </style>
 </head>
 <body>
-    <div id="news-section"></div>
-    <button class="add-news" onclick="addNews()">Adicionar Notícia</button>
-
+    <div id="news-thumbnails"></div>
+    
     <script>
-        function addNews() {
-            const newsSection = document.getElementById('news-section');
+        const news = [
+            { id: 1, title: "Visita UNIPAR", image: "img/unipar.jpg", content: "Uma visita dos alunos formandos à Universidade Paranaense (Unipar) proporcionou uma experiência inspiradora, com tours pelos laboratórios, bibliotecas e uma palestra motivadora de professores renomados, destacando a importância da educação contínua. Os alunos saíram motivados e com uma visão clara do futuro." },
+            { id: 2, title: "Notícia 2", image: "url-da-imagem2.jpg", content: "Conteúdo da notícia 2" },
+            { id: 3, title: "Notícia 3", image: "url-da-imagem3.jpg", content: "Conteúdo da notícia 3" },
+            { id: 4, title: "Notícia 4", image: "url-da-imagem4.jpg", content: "Conteúdo da notícia 4" },
+            { id: 5, title: "Notícia 5", image: "url-da-imagem5.jpg", content: "Conteúdo da notícia 5" },
+            { id: 6, title: "Notícia 6", image: "url-da-imagem6.jpg", content: "Conteúdo da notícia 6" },
+            { id: 7, title: "Notícia 7", image: "url-da-imagem7.jpg", content: "Conteúdo da notícia 7" },
+            { id: 8, title: "Notícia 8", image: "url-da-imagem8.jpg", content: "Conteúdo da notícia 8" },
+            { id: 9, title: "Notícia 9", image: "url-da-imagem9.jpg", content: "Conteúdo da notícia 9" },
+            { id: 10, title: "Notícia 10", image: "url-da-imagem10.jpg", content: "Conteúdo da notícia 10" }
+        ];
 
-            const newsContainer = document.createElement('div');
-            newsContainer.className = 'news-container';
+        const newsThumbnails = document.getElementById('news-thumbnails');
 
-            const newsTitle = document.createElement('h1');
-            newsTitle.className = 'news-title';
-            newsTitle.innerText = 'Visita a Unipar/umuarama';
-
-            const newsImage = document.createElement('img');
-            newsImage.src = 'img/unipar.jpg';
-            newsImage.alt = 'alunos 3° anos 2024';
-
-            const newsContent = document.createElement('div');
-            newsContent.className = 'news-content';
-            newsContent.innerHTML = `
-                <p>Visita dos Formandos à Unipar: Um Passo Rumo ao Futuro
-Nossos alunos formandos tiveram a honra de visitar a Universidade Paranaense (Unipar), onde puderam vivenciar um pouco do que os aguarda na próxima etapa de suas vidas acadêmicas. A recepção foi marcada por um ambiente acolhedor e informativo, onde os estudantes foram guiados por um tour detalhado pelo campus.
-
-Os alunos ficaram impressionados com a infraestrutura da universidade, que inclui laboratórios de última geração, uma biblioteca vastamente equipada e espaços de convivência projetados para estimular a troca de ideias. Além disso, tiveram a chance de participar de uma sessão interativa com professores, que abordaram temas relevantes para suas futuras carreiras e responderam a perguntas dos alunos..</p>
-                <p>A visita foi enriquecedora e trouxe uma nova perspectiva para os formandos. "A estrutura da Unipar é realmente impressionante e nos mostrou como a universidade está preparada para nos ajudar a alcançar nossos objetivos", comentou Higor, aluno formanda. A experiência fortaleceu a confiança dos alunos em seus próximos passos e os deixou animados para o futuro acadêmico.
-
-Lindos momentos, hein? 📚✨.</p>
+        news.forEach(article => {
+            const thumbnail = document.createElement('div');
+            thumbnail.className = 'news-thumbnail';
+            thumbnail.innerHTML = `
+                <img src="${article.image}" alt="${article.title}">
+                <div class="title">${article.title}</div>
             `;
+            thumbnail.onclick = () => openArticle(article.id);
+            newsThumbnails.appendChild(thumbnail);
+        });
 
-            newsContainer.appendChild(newsTitle);
-            newsContainer.appendChild(newsImage);
-            newsContainer.appendChild(newsContent);
+        function openArticle(id) {
+            const article = news.find(n => n.id === id);
+            document.body.innerHTML = `
+                <div class="news-container">
+                    <button onclick="goBack()">Voltar ao Início</button>
+                    <h1>${article.title}</h1>
+                    <img src="${article.image}" alt="${article.title}">
+                    <div class="news-content">
+                        <p>${article.content}</p>
+                    </div>
+                    <button onclick="navigateNews(${id - 1})">Notícia Anterior</button>
+                    <button onclick="navigateNews(${id + 1})">Próxima Notícia</button>
+                </div>
+            `;
+        }
 
-            newsSection.appendChild(newsContainer);
+        function goBack() {
+            location.reload();
+        }
+
+        function navigateNews(id) {
+            if (id > 0 && id <= news.length) {
+                openArticle(id);
+            }
         }
     </script>
 </body>
 </html>
-
