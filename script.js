@@ -133,3 +133,18 @@ function checkPassword() {
     }
 }
 
+window.sr = ScrollReveal({ reset: true });
+
+sr.reveal('.sobre', { 
+    rotate: { x:0, y:80, z:0},
+    duration: 2000
+});
+
+sr.reveal('.equipe administrativa', { duration: 1000});
+
+sr.reveal('.fique por dentro', { duration: 1000});
+
+sr.reveal('.gallery', { duration: 1000});
+
+sr.reveal('.contato', { duration: 1000});
+
