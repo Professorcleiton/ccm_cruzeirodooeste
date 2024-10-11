@@ -474,3 +474,7 @@ video {
     border-radius: 5px;
     margin-top: 2rem;
 }
+
+.sobre, .equipe administrativa, .fique por dentro, .gallery, .contato {
+    visibility: hidden;
+}
