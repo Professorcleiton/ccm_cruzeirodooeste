@@ -475,7 +475,7 @@ video {
     margin-top: 2rem;
 }
 
-.sobre, .equipe administrativa, .fique por dentro, .gallery, .contato {
+#sobre, #equipe administrativa, #fique por dentro, #gallery, #contato {
     visibility: hidden;
 }
 
