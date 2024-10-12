@@ -478,3 +478,10 @@ video {
 .sobre, .equipe administrativa, .fique por dentro, .gallery, .contato {
     visibility: hidden;
 }
+
+.img {
+    height: 20vh;
+    width: 30vw;
+    object-fit: cover;
+}
+
