@@ -480,8 +480,8 @@ video {
 }
 
 .img {
-    height: 5vh;
-    width: 15vw;
+    height: 15vh;
+    width: 20vw;
     object-fit: cover;
 }
 
