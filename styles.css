@@ -476,8 +476,8 @@ video {
 }
 
 .img {
-    height: 20vh;
-    width: 25vw;
+    height: 25vh;
+    width: 20vw;
     object-fit: cover;
 }
 
